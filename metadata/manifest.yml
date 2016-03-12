@@ -77,9 +77,9 @@ Endpoints:
   Private-Port-Name: JPDA_PORT
   Private-Port: 8787
 - Private-IP-Name:   IP
-    Private-Port-Name: HAZELCAST_PORT
-    Private-Port:      5701
-    Public-Port-Name:  HAZELCAST_PROXY_PORT
+  Private-Port-Name: HAZELCAST_PORT
+  Private-Port:      5701
+  Public-Port-Name:  HAZELCAST_PROXY_PORT
 Additional-Control-Actions:
 - threaddump
 Version-Overrides:
