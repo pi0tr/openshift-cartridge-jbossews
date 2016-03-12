@@ -1,7 +1,7 @@
 ---
 Name: jbossews
 Cartridge-Short-Name: JBOSSEWS
-Cartridge-Vendor: redhat
+Cartridge-Vendor: pksystems
 Cartridge-Version: 0.0.30
 Compatible-Versions:
 - 0.0.21
@@ -31,7 +31,7 @@ Categories:
 - tomcat
 - tomcat7
 - web_framework
-Website: http://www.redhat.com/products/jbossenterprisemiddleware/web-server/
+Website: https://github.com/pi0tr/openshift-cartridge-jbossews
 Help-Topics:
   Developer Center: https://www.openshift.com/developers
 Provides:
