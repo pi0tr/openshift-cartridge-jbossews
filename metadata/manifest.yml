@@ -42,12 +42,18 @@ Provides:
 Publishes:
   get-internal-uri:
     Type: NET_TCP:http
+  publish-jbossews-cluster:
+    Type: "NET_TCP:jbossews-cluster-info"
+
 Subscribes:
   set-env:
     Type: ENV:*
     Required: false
   set-jdbc-info:
     Type: NET_TCP:jdbc
+  set-jbossews-cluster:
+    Type: "NET_TCP:jbossews-cluster-info"
+
 Endpoints:
 - Private-IP-Name: IP
   Private-Port-Name: HTTP_PORT
@@ -70,6 +76,10 @@ Endpoints:
 - Private-IP-Name: IP
   Private-Port-Name: JPDA_PORT
   Private-Port: 8787
+- Private-IP-Name:   IP
+    Private-Port-Name: HAZELCAST_PORT
+    Private-Port:      5701
+    Public-Port-Name:  HAZELCAST_PROXY_PORT
 Additional-Control-Actions:
 - threaddump
 Version-Overrides:

@@ -23,3 +23,13 @@ reinstall_path
 
 # Set up the config directory in the user repository template
 cp ${OPENSHIFT_JBOSSEWS_DIR}/usr/versions/{shared,${version}}/configuration/* ${OPENSHIFT_JBOSSEWS_DIR}/template/.openshift/config
+
+OPENSHIFT_JBOSSEWS_PROXY_IP=$(ping -c 1 ${OPENSHIFT_GEAR_DNS} | awk '{ print $3 ; exit }' | sed 's/(//g' | sed 's/)//g')
+
+#if [ -z "$OPENSHIFT_VERTX_CLUSTER_PROXY_PORT" ]; then
+#  OPENSHIFT_VERTX_CLUSTER_PROXY_PORT=7600
+#fi
+
+if [ -z "$OPENSHIFT_JBOSSEWS_HAZELCAST_CLUSTER" ]; then
+  OPENSHIFT_JBOSSEWS_HAZELCAST_CLUSTER="${OPENSHIFT_JBOSSEWS_IP}:${OPENSHIFT_JBOSSEWS_HAZELCAST_PORT}"
+fi
