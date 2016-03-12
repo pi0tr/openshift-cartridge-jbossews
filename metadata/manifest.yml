@@ -42,6 +42,8 @@ Provides:
 Publishes:
   get-internal-uri:
     Type: NET_TCP:http
+  publish-gear-endpoint:
+    Type: "NET_TCP:gear-endpoint-info"
   publish-jbossews-cluster:
     Type: "NET_TCP:jbossews-cluster-info"
 
