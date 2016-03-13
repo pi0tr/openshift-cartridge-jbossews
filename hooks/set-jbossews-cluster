@@ -16,6 +16,9 @@ for arg in $kvargs; do
     fi
 done
 
+OPENSHIFT_JBOSSEWS_PROXY_IP=$(ping -c 1 ${OPENSHIFT_GEAR_DNS} | awk '{ print $3 ; exit }' | sed 's/(//g' | sed 's/)//g')
+echo $OPENSHIFT_JBOSSEWS_PROXY_IP > $OPENSHIFT_JBOSSEWS_DIR/env/OPENSHIFT_JBOSSEWS_PROXY_IP
+
 echo $list > $OPENSHIFT_JBOSSEWS_DIR/env/OPENSHIFT_JBOSSEWS_HAZELCAST_CLUSTER
 
 
